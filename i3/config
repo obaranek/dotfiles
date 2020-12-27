@@ -1,0 +1,215 @@
+set $mod Mod4
+floating_modifier $mod
+font pango:Ubuntu Nerd Font 11
+set $refresh_i3status killall -SIGUSR1 i3status
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 10
+
+#Color Scheme
+set $base00 #101218
+set $base01 #1f222d
+set $base02 #252936
+set $base03 #7780a1
+set $base04 #C0C5CE
+set $base05 #d1d4e0
+set $base06 #C9CCDB
+set $base07 #ffffff
+set $base08 #ee829f
+set $base09 #f99170
+set $base0A #ffefcc
+set $base0B #a5ffe1
+set $base0C #97e0ff
+set $base0D #97bbf7
+set $base0E #c0b7f9
+set $base0F #fcc09e
+set $bg-color 	         #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
+
+# Key binding
+
+##Apps
+bindsym $mod+d exec rofi -show drun -icon-theme "Papirus" drun -theme $HOME/rofi-collection/dracula/dracula.rasi
+bindsym $mod+b exec brave
+bindsym $mod+period exec alacritty  -e /bin/fish -C ranger
+bindsym $mod+c exec emacs
+bindsym $mod+p exec flameshot gui
+##Workspace Navigation
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+##Moving Windows
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+##Changing layout
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
+
+##Splitting
+bindsym $mod+backslash split h
+bindsym $mod+minus split v
+
+## Multimedia keys
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
+
+# Touchpad controls
+bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+
+##Workspaces Navigation
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+##Moving Container
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+##Resizing
+bindsym $mod+r mode "resize"
+mode "resize" {
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+##Genral
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parent
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+shift+x exec i3lock -c 282a36
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Shift+q kill
+
+
+#Aranging workspaces to monitors
+workspace $ws1 output DP-1
+workspace 2 output DP-1
+workspace 3 output DP-1
+workspace 4 output DP-1
+workspace 5 output DP-1
+workspace 6 output eDP-1
+workspace 7 output eDP-1
+workspace 8 output eDP-1
+workspace 9 output eDP-1
+workspace 10 output eDP-1
+
+
+#theme
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+
+client.background       #F8F8F2
+
+#i3gaps
+gaps inner 10
+gaps outer 1
+for_window [class="^.*"] border pixel 2
+smart_borders on
+smart_gaps on
+hide_edge_borders both
+
+#gaps inner 10
+
+# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
+# gaps inner|outer current|all set|plus|minus <px>
+# gaps inner all set 10
+# gaps outer all plus 5
+
+# Smart gaps (gaps used if only more than one container on the workspace)
+#smart_gaps on
+
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
+# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
+#smart_borders on
+
+
+#Startup
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+#exec_always --no-startup-id $HOME/polybar-collection/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/forest/launch.sh
+exec_always bash /home/obaranek/.screenlayout/monitorandlaptop.sh
+exec_always --no-startup-id nitrogen --restore
+exec --no-startup-id spotify
+#exec --no-startup-id mailspring
+exec --no-startup-id workspace $ws1
+#exec --no-startup-id "i3-msg 'workspace $ws9; exec firefox --new-window https://www.notion.so/b9cca3b2879e4b309883d77c89f008fd?v=d0509d7e087b4666b51122b7a3f0dc44'"
+#exec --no-startup-id alacritty  -e /bin/fish -C neofetch
+#exec --no-startup-id alacritty
+#exec --no-startup-id alacritty
+#exec --no-startup-id discord-canary
+#exec --no-startup-id "i3-msg 'workspace $ws1; append_layout /home/obaranek/.config/i3-layout-manager/layouts/layout-WS1.json';"
+#exec --no-startup-id mailspring
+#exec --no-startup-id fish -c emacs
+for_window [class="Spotify"] move to workspace $ws10
+for_window [class="discord"] move to workspace $ws7
+for_window [class="Mailspring"] move to workspace $ws9
+for_window [class="Emacs"] move to workspace $ws2
+exec_always --no-startup-id picom
