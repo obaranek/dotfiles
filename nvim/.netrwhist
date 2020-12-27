@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/alpha'
+let g:netrw_dirhist_4='/home/alpha/Dev/courses/react'
+let g:netrw_dirhist_3='/home/alpha/Dev/courses/react/hooks-01-starting-project/src/components/Ingredients'
+let g:netrw_dirhist_2='/home/alpha/Dev/courses/react/hooks-01-starting-project'
+let g:netrw_dirhist_1='/home/alpha/.config/nvim/rcs'
+let g:netrw_dirhist_0='/home/alpha/.config'
+let g:netrw_dirhist_9='/home/alpha/Dev'
+let g:netrw_dirhist_8='/home/alpha/.config/nvim/rcs'
+let g:netrw_dirhist_7='/home/alpha/Dev/courses/react/animations--01-start/animations--01-start/src'
+let g:netrw_dirhist_6='/home/alpha/Dev/courses/react/animations--01-start/animations--01-start/public'
