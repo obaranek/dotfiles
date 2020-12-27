@@ -40,7 +40,7 @@ set $urgent-bg-color     #E53935
 # Key binding
 
 ##Apps
-bindsym $mod+d exec rofi -show drun -icon-theme "Papirus" drun -theme $HOME/rofi-collection/dracula/dracula.rasi
+bindsym $mod+d exec rofi -show drun -icon-theme "Papirus" drun -theme $HOME/.config/rofi-collection/dracula/dracula.rasi
 bindsym $mod+b exec brave
 bindsym $mod+period exec alacritty  -e /bin/fish -C ranger
 bindsym $mod+c exec emacs
