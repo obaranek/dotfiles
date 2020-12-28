@@ -1,4 +1,1 @@
-#! /bin/bash
-# xrandr --setprovideroutputsource modesetting NVIDIA-0
-# xrandr --auto
-exec dbus-launch i3
+exec i3
