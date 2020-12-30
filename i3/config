@@ -13,30 +13,6 @@ set $ws8 8
 set $ws9 9
 set $ws10 10
 
-#Color Scheme
-set $base00 #101218
-set $base01 #1f222d
-set $base02 #252936
-set $base03 #7780a1
-set $base04 #C0C5CE
-set $base05 #d1d4e0
-set $base06 #C9CCDB
-set $base07 #ffffff
-set $base08 #ee829f
-set $base09 #f99170
-set $base0A #ffefcc
-set $base0B #a5ffe1
-set $base0C #97e0ff
-set $base0D #97bbf7
-set $base0E #c0b7f9
-set $base0F #fcc09e
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
-
-
 # Key binding
 
 ##Apps
@@ -77,7 +53,7 @@ bindsym $mod+minus split v
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $(pactl list sinks | egrep -B 1 "RUNNING" | egrep -o [0-9]) +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $(pactl list sinks | egrep -B 1 "RUNNING" | egrep -o [0-9]) -5%
-bindsym XF86AudioMute exec --no-startup-id $(pactl list sinks | egrep -B 1 "RUNNING" | egrep -o [0-9]) toggle
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $(pactl list sinks | egrep -B 1 "RUNNING" | egrep -o [0-9]) toggle
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
@@ -161,6 +137,7 @@ workspace 9 output eDP-1
 workspace 10 output eDP-1
 
 
+#theme
 #theme
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
