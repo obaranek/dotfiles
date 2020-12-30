@@ -1,4 +1,6 @@
 alias vim="nvim"
+alias spicetify-arc-dark="spicetify config current_theme Arc-Dark && spicetify apply"
+alias spicetify-dracula="spicetify config current_theme Dracula && spicetify apply"
 
 function set_mode_pre_execution --on-event fish_preexec
     set command (expr $argv : '\([^ ]*\).*')

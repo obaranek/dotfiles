@@ -1,5 +1,5 @@
 import:
-  - /home/obaranek/.config/alacritty/alacritty-master/dracula.yml
+  - /home/obaranek/.config/alacritty/alacritty-master/doom.yml
 env:
   # TERM variable
   #

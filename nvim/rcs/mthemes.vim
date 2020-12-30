@@ -32,7 +32,7 @@ let g:gruvbox_invert_selection='0'
 let g:gruvbox_improved_warnings = 1
 let g:gruvbox_material_palette = 'mix'
 
-let g:airline_theme = 'dracula'
+let g:airline_theme = 'deus'
 
-colorscheme dracula
+colorscheme doom-one
 " colorscheme oceanic_material

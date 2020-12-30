@@ -17,14 +17,14 @@ Plug 'tpope/vim-commentary'
 Plug 'voldikss/vim-floaterm'
 Plug 'airblade/vim-gitgutter'
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'romgrk/barbar.nvim'
+"Plug 'romgrk/barbar.nvim'
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 Plug 'gcmt/wildfire.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'liuchengxu/vim-clap'
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'romgrk/nvim-treesitter-context'
+"Plug 'romgrk/nvim-treesitter-context'
 " Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
 "Themes
