@@ -16,9 +16,9 @@
 ;; + `doom-variable-pitch-font'
 ;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
- (setq doom-font (font-spec :family "Sauce Code Pro Nerd Font" :size 16)
-      doom-variable-pitch-font (font-spec :family "Sauce Code Pro Nerd Font" :size 17)
-      doom-big-font (font-spec :family "Sauce Code Pro Nerd Font" :size 24))
+ (setq doom-font (font-spec :family "Fira Code Nerd Font" :size 16)
+      doom-variable-pitch-font (font-spec :family "Fira Code Nerd Font" :size 17)
+      doom-big-font (font-spec :family "Fira Code Nerd Font" :size 24))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
@@ -94,3 +94,4 @@
 (setq-default electric-indent-inhibit t)
 (setq backward-delete-char-untabify-method 'hungry)
 (setq-default evil-shift-width 2)
+(setq js-indent-level 2)
