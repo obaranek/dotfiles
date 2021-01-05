@@ -1,6 +1,16 @@
 alias vim="nvim"
 alias spicetify-arc-dark="spicetify config current_theme Arc-Dark && spicetify apply"
 alias spicetify-dracula="spicetify config current_theme Dracula && spicetify apply"
+alias fish-dracula="fisher install dracula/fish"
+
+set TERM "xterm-256color"
+
+### AUTOCOMPLETE AND HIGHLIGHT COLORS ###
+set fish_color_normal brcyan
+set fish_color_autosuggestion '#7d7d7d'
+set fish_color_command brcyan
+set fish_color_error '#ff6c6b'
+set fish_color_param brcyan
 
 #function set_mode_pre_execution --on-event fish_preexec
 #    set command (expr $argv : '\([^ ]*\).*')

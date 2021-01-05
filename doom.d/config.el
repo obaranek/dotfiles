@@ -16,8 +16,8 @@
 ;; + `doom-variable-pitch-font'
 ;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
- (setq doom-font (font-spec :family "Fira Code Nerd Font" :size 16)
-      doom-variable-pitch-font (font-spec :family "Fira Code Nerd Font" :size 17)
+ (setq doom-font (font-spec :family "mononoki Nerd Font" :size 16)
+      doom-variable-pitch-font (font-spec :family "mononoki Nerd Font" :size 17)
       doom-big-font (font-spec :family "Fira Code Nerd Font" :size 24))
 (after! doom-themes
   (setq doom-themes-enable-bold t
