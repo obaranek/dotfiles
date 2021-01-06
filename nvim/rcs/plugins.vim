@@ -23,7 +23,7 @@ Plug 'gcmt/wildfire.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'liuchengxu/vim-clap'
-"Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter'
 "Plug 'romgrk/nvim-treesitter-context'
 " Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
@@ -50,7 +50,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'yuezk/vim-js'
 
 " C++
-Plug 'rhysd/vim-clang-format'
+"Plug 'rhysd/vim-clang-format'
+Plug 'adizero/vim-clang-format'
 Plug 'tpope/vim-surround'
 " Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'drmikehenry/vim-headerguard'

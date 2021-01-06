@@ -38,7 +38,7 @@ set updatetime=50
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-set colorcolumn=80
+"set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 autocmd FileType javascriptreact setlocal ts=2 sts=2 sw=2

@@ -11,6 +11,6 @@ disabled = true
 
 #➜ ✗
 [character]
-success_symbol = "[✗](bold green)"
+success_symbol = "[✗](bold yellow)"
 vicmd_symbol = "[✗](bold yellow)"
 error_symbol = "[✗](bold red)"

@@ -169,10 +169,10 @@ client.background       #F8F8F2
 
 #i3gaps
 gaps inner 10
-gaps outer 1
+gaps outer 10
 for_window [class="^.*"] border pixel 2
 smart_borders on
-smart_gaps on
+#smart_gaps on
 hide_edge_borders both
 
 #gaps inner 10
@@ -195,8 +195,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 #exec_always --no-startup-id $HOME/polybar-collection/launch.sh
 exec_always --no-startup-id $HOME/.config/polybar/forest/launch.sh
-exec_always bash /home/obaranek/.screenlayout/monitorandlaptop.sh
-exec_always --no-startup-id nitrogen --restore
+#exec_always bash /home/obaranek/.screenlayout/monitorandlaptop.sh
+#exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup bash /home/obaranek/Misc/wallpaper.sh
 exec --no-startup-id spotify
 #exec --no-startup-id mailspring
 exec --no-startup-id workspace $ws1

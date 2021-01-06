@@ -4,16 +4,16 @@ inoremap jk <Esc>
 inoremap kj <Esc>
 
 " window-navigation
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>wh :wincmd h<CR>
+nnoremap <leader>wj :wincmd j<CR>
+nnoremap <leader>wk :wincmd k<CR>
+nnoremap <leader>wl :wincmd l<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
-nnoremap <Leader>+ :vertical resize +5<CR>
-nnoremap <Leader>- :vertical resize -5<CR>
-nnoremap <Leader>rp :resize 100<CR>
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+"nnoremap <Leader>+ :vertical resize +5<CR>
+"nnoremap <Leader>- :vertical resize -5<CR>
+"nnoremap <Leader>rp :resize 100<CR>
+"vnoremap J :m '>+1<CR>gv=gv
+"vnoremap K :m '<-2<CR>gv=gv
 
 "coc
 nmap <C-h> :CocCommand clangd.switchSourceHeader<CR>
@@ -43,7 +43,6 @@ vnoremap <leader>/  :Commentary<CR>
 " nnoremap <Leader>F :Files<CR>
 
 " ClangFormat
-nnoremap <Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 
@@ -63,7 +62,7 @@ let g:multi_cursor_quit_key            = '<Esc>'
 nnoremap <leader>u :UndotreeToggle<CR>
 
 " Nerd tree
-map <space>m :NERDTreeToggle<CR>
+map <space>op :NERDTreeToggle<CR>
 
 " ripgrep
 " nnoremap <Leader>gp :Rg<SPACE>
@@ -108,9 +107,9 @@ vmap <leader>W <Plug>(wildfire-water)
 nmap <leader>qw <Plug>(wildfire-quick-select)
 
 "vim -clap
-nnoremap <Leader>F :Clap files<CR>
+nnoremap <Leader>. :Clap files<CR>
 nnoremap <C-p> :Clap gfiles<CR>
-nnoremap <Leader>gp :Clap grep<CR>
+nnoremap <Leader>ss :Clap grep<CR>
 
 "coc-floterm
 " Configuration example
