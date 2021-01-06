@@ -110,3 +110,12 @@ let g:coc_global_extensions = ['coc-tsserver']
 " coc-clangd
 
 "treesitter
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained",
+  highlight = {
+    enable = true,
+    disable = { },
+  },
+}
+EOF
