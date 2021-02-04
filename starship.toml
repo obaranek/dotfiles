@@ -10,7 +10,7 @@ disabled = true
 #error_symbol = "[➜](bold red) "
 
 #➜ ✗
-[character]
-success_symbol = "[✗](bold yellow)"
-vicmd_symbol = "[✗](bold yellow)"
-error_symbol = "[✗](bold red)"
+#[character]
+#success_symbol = "[✗](bold yellow)"
+#vicmd_symbol = "[✗](bold yellow)"
+#error_symbol = "[✗](bold red)"

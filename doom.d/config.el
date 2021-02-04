@@ -16,9 +16,9 @@
 ;; + `doom-variable-pitch-font'
 ;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
- (setq doom-font (font-spec :family "Sauce Code Pro Nerd Font" :size 16)
-      doom-variable-pitch-font (font-spec :family "Sauce Code Pro Nerd Font" :size 17)
-      doom-big-font (font-spec :family "Fira Code Nerd Font" :size 24))
+ (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 16)
+      doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 17)
+      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 24))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
@@ -88,10 +88,15 @@
 
 (require 'dap-gdb-lldb)
 (setq dap-auto-configure-features '(sessions locals controls tooltip))
-(setq c-default-style "linux"
-          c-basic-offset 2)
+;(setq c-default-style "linux"
+;          c-basic-offset 2)
 
 (setq-default electric-indent-inhibit t)
-(setq backward-delete-char-untabify-method 'hungry)
-(setq-default evil-shift-width 2)
-(setq js-indent-level 2)
+;(setq backward-delete-char-untabify-method 'hungry)
+;(setq-default evil-shift-width 2)
+;(setq js-indent-level 2)
+; (setq tab-width 2)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq indent-line-function 'insert-tab)
+(setq c-basic-offset 2)

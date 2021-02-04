@@ -41,6 +41,11 @@ set shortmess+=c
 "set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+augroup highlight_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
+augroup END
+
 autocmd FileType javascriptreact setlocal ts=2 sts=2 sw=2
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType css setlocal ts=2 sts=2 sw=2
