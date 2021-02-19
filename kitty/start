@@ -1,1 +1,3 @@
-launch fish -C pfetch
+launch fish
+#launch fish -C pfetch
+

@@ -68,9 +68,8 @@
 ;;syntax checking
 (after! flycheck(setq flycheck-check-syntax-automatically '( idle-change new-line save)))
 
-(after! lsp(setq company-minimum-prefix-length 1
+(after! lsp (setq company-minimum-prefix-length 1
       company-idle-delay 0.0))
-
 
 ;;treesitter highlight
 (use-package! tree-sitter
@@ -88,15 +87,16 @@
 
 (require 'dap-gdb-lldb)
 (setq dap-auto-configure-features '(sessions locals controls tooltip))
-;(setq c-default-style "linux"
-;          c-basic-offset 2)
 
 (setq-default electric-indent-inhibit t)
-;(setq backward-delete-char-untabify-method 'hungry)
-;(setq-default evil-shift-width 2)
-;(setq js-indent-level 2)
-; (setq tab-width 2)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 (setq indent-line-function 'insert-tab)
 (setq c-basic-offset 2)
+
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
+;
+(add-hook 'foo-mode-hook 'eglot-ensure)
+
+(add-hook 'c++-mode-hook 'irony-mode)
