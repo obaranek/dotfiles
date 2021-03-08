@@ -1,6 +1,6 @@
 set $mod Mod4
 floating_modifier $mod
-font pango:Ubuntu 11
+font pango: Ubuntu 11
 set $refresh_i3status killall -SIGUSR1 i3status
 set $ws1 1
 set $ws2 2
@@ -30,17 +30,19 @@ set $base0C #97e0ff
 set $base0D #97bbf7
 set $base0E #c0b7f9
 set $base0F #fcc09e
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
+set $bg-color #2f343f
+set $inactive-bg-color #2f343f
+set $text-color #f3f4f5
 set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+set $urgent-bg-color #E53935
 
 # Key binding
 
 ##Apps
 bindsym $mod+d exec rofi -show drun -icon-theme "Papirus" drun -theme $HOME/.config/rofi-collection/dracula/dracula.rasi
-bindsym $mod+b exec firefox
+bindsym $mod+x exec firefox
+bindsym $mod+b exec brave
+bindsym $mod+p exec emacs
 bindsym $mod+period exec alacritty  -e /bin/fish -C ranger
 bindsym $mod+c exec flameshot gui
 ##Workspace Navigation
@@ -219,5 +221,5 @@ exec --no-startup-id workspace $ws1
 for_window [class="Spotify"] move to workspace $ws10
 for_window [class="discord"] move to workspace $ws7
 for_window [class="Mailspring"] move to workspace $ws9
-for_window [class="Emacs"] move to workspace $ws2
+#for_window [class="Emacs"] move to workspace $ws2
 exec_always --no-startup-id picom
